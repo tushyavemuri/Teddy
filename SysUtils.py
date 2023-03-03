@@ -6,7 +6,7 @@ def sysUtils(inCommand):
     if(inCommand == "date"):
         print("datetime")
     elif(inCommand ==  "uptime"):
-        print(time.CLOCK_UPTIME)
+        print(time)
     elif(inCommand ==  "memory"):
             print("memory")
     elif(inCommand ==  "network"):
