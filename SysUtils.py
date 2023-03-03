@@ -1,17 +1,17 @@
+import time
 
 def sysUtils(inCommand):
     print("Started processing input request "+inCommand)
-    match inCommand:
-        case "date":
-            print("datetime")
-        case "uptime":
-            print("uptime")
-        case "memory":
+    
+    if(inCommand == "date"):
+        print("datetime")
+    elif(inCommand ==  "uptime"):
+        print(time.CLOCK_UPTIME)
+    elif(inCommand ==  "memory"):
             print("memory")
-        case "network":
+    elif(inCommand ==  "network"):
             print("network")
-        case "users":
+    elif(inCommand ==  "users"):
             print("users")
-        case "processes":
-            print("processes"
-            )
+    elif(inCommand ==  "processes"):
+            print("processes")
