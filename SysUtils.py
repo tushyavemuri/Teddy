@@ -4,14 +4,14 @@ def sysUtils(inCommand):
     print("Started processing input request "+inCommand)
     
     if(inCommand == "date"):
-        print("datetime")
+        return "datetime"
     elif(inCommand ==  "uptime"):
-        print(time)
+        return "uptime"
     elif(inCommand ==  "memory"):
-            print("memory")
+        return "memory"
     elif(inCommand ==  "network"):
-            print("network")
+        return "network"
     elif(inCommand ==  "users"):
-            print("users")
+        return "users"
     elif(inCommand ==  "processes"):
-            print("processes")
+        return "processes"
