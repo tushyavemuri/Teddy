@@ -1,7 +1,11 @@
 import time
+import psutil
+import os
+import sys
+import logging
 
 def sysUtils(inCommand):
-    print("Started processing input request "+inCommand)
+    logging.info(f"Started processing input request : {inCommand}")
     
     if(inCommand == "date"):
         return "datetime"
