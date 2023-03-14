@@ -32,7 +32,6 @@ try:
   while True:
       logging.info(f"Teddy is ready to accept connections from buddies.")
       teddy,address = teddySocket.accept()
-      signal.signal(signal.SIGINT, signalHandler)
       logging.info(f"Connection from buddy : {address} has been established.")
       
       logging.info(f"Waiting for request from buddy : {address}.")

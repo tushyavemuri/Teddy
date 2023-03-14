@@ -19,3 +19,5 @@ def sysUtils(inCommand):
         return "users"
     elif(inCommand ==  "processes"):
         return "processes"
+    else:
+        return "invalid request"
