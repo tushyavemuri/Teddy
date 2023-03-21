@@ -24,7 +24,8 @@ try:
   teddySocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
   teddySocket.bind((HOST,PORT))
 except Exception:
-  logging.error(f"Creating socket failed with exception {Exception}")
+  logging.error(f"Creating socket failed with exception.")
+  sys.exit(8)
 
 # Configuring no.of client to connect at same time
 teddySocket.listen(CLIENTLIMIT)
@@ -34,15 +35,15 @@ try:
       teddy,address = teddySocket.accept()
       logging.info(f"Connection from buddy : {address} has been established.")
       
-      logging.info(f"Waiting for request from buddy : {address}.")
+      logging.info(f"Waiting for request from buddy : {address}")
       request = teddy.recv(1024).decode('utf-8')
-      logging.info(f"Received request from buddy : {address} and the request is : {request}")
+      logging.info(f"Received request from buddy :  {address} and the request is : {request}")
     
       try:
         logging.info(f"Teddy worker is working on the request from buddy")
         response = teddyworker.teddyWorker(request)
       except Exception:
-        logging.error(f"Teddy workker failed to perform the request with exception : {Exception}")
+        logging.error(f"Teddy workker failed to perform the request with exception.")
         teddy.close()
         sys.exit(8)
       

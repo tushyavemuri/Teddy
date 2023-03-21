@@ -1,11 +1,10 @@
-import linuxsystemutils as LSU
-import windowssystemutils as WSU
+import systemutils as SU
 import logging
 
 def teddyWorker(inRequest):
     
     logging.info(f"Input request to teddy worker : {inRequest}")
-    result = LSU.sysUtils(inRequest)
+    result = SU.sysUtils(inRequest)
     return result
 
 #inRequest = "uptime"
