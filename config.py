@@ -1,5 +1,5 @@
 import socket
 
-HOST = '127.0.0.1' #socket.gethostname()
+HOST = '139.62.210.155' #socket.gethostname()
 PORT = 55777
 CLIENTLIMIT = 1
