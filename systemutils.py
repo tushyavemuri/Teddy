@@ -56,7 +56,7 @@ def sysUtils(inCommand):
         #return "users"
     elif(inCommand ==  "processes"):
         logging.info(f"started")
-        result = subprocess.run(['ps','-aef'], stdout=subprocess.PIPE)
+        result = subprocess.run(['ps','-aNfu','root'], stdout=subprocess.PIPE)
         return f"{result.stdout.decode('utf-8')}"
         #processes = psutil.process_iter()
         #processes_str = "Running processes:\n"
