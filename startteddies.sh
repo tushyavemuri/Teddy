@@ -1,1 +1,1 @@
-python3 teddyserver.py
+python3 teddiesserver.py
