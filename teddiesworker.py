@@ -11,7 +11,7 @@ def teddiesWorker(teddy,address):
     result = SU.sysUtils(request)
 
     logging.info(f"Teddy worker completed task and responding to buddy")
-    teddy.sendall(result)
+    teddy.sendall(result.encode('utf-8'))
     logging.info(f"Closing connection with buddy : {address}")
     teddy.close()
 
