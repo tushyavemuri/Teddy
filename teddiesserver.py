@@ -33,7 +33,7 @@ def main():
     sys.exit(8)
 
   # Configuring no.of client to connect at same time
-  teddySocket.listen(CLIENTLIMIT)
+  teddySocket.listen()
   try:
     while looper:
         logging.info(f"Teddy is ready to accept connections from buddies.")
